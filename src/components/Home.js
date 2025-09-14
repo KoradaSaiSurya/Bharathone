@@ -13,28 +13,28 @@ function Home() {
       </header>
 
       <section className="cards">
-        <div className="card agri">
+        <div className="card agri" onClick={() => navigate("/agriculture")}>
           <h2>🌱 AgriTech</h2>
           <p>Smart farming tools, crop disease detection, market prices & weather updates for farmers.</p>
-          <button onClick={() => navigate("/agriculture")}>Explore AgriTech</button>
+          <button >Explore AgriTech</button>
         </div>
 
-        <div className="card gov">
+        <div className="card gov" onClick={() => navigate("/mainServices")}>
           <h2>🏛 GovTech</h2>
           <p>Government schemes, e-services, bill payments & citizen support at one place.</p>
-          <button onClick={() => navigate("/mainServices")}>Explore GovTech</button>
+          <button >Explore GovTech</button>
         </div>
 
-        <div className="card health">
+        <div className="card health" onClick={() => navigate("/health")}>
           <h2>🏥 HealthTech</h2>
           <p>Online doctor consultations, health records & medicine suggestions for patients.</p>
-          <button onClick={() => navigate("/health")}>Explore HealthTech</button>
+          <button >Explore HealthTech</button>
         </div>
 
-        <div className="card edu">
+        <div className="card edu" onClick={() => navigate("/edTech")}>
           <h2>🎓 EdTech</h2>
           <p>Courses, study materials, live classes & career guidance for students.</p>
-          <button onClick={() => navigate("/edtech")}>Explore EdTech</button>
+          <button >Explore EdTech</button>
         </div>
       </section>
     </div>
