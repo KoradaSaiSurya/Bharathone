@@ -8,7 +8,7 @@ In India, citizens face challenges in accessing **agriculture, healthcare, educa
 - **Students** → Miss structured courses, resources, and assignments.  
 - **Citizens** → Waste time navigating multiple portals for Aadhaar, PAN, ration, pension, bills, licenses, etc.  
 
-👉 This gap creates **inequality and delays** in accessing essential services.  
+
 
 ---
 
