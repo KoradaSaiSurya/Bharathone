@@ -24,16 +24,7 @@ export default function CourseDetails() {
     setProgress(course.id, next);
   }
 
-  function downloadCertificate() {
-    const content = `Certificate of Completion\n\nThis certifies that ${student.name} (${student.email}) has completed ${course.title}.`;
-    const blob = new Blob([content], { type: "text/plain" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = `${student.name || "student"}-${course.id}-certificate.txt`;
-    a.click();
-    URL.revokeObjectURL(url);
-  }
+
 
   return (
     <section className="course-details">
@@ -94,7 +85,6 @@ export default function CourseDetails() {
 
             <div className="action-group">
               <button className="btn-primary" onClick={() => markProgress(5)}>Mark Learning +5%</button>
-              <button className="btn-outline" onClick={downloadCertificate}>Download Certificate</button>
             </div>
           </div>
 

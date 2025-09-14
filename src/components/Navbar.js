@@ -18,10 +18,12 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className="logo">BharathOne</div>
+      <div className="logo">
+        <Link to="/" className="logo">BharathOne</Link>
+      </div>
 
       <ul className={`nav-links ${mobileOpen ? "open" : ""}`}>
-        <li className="home">
+        <li className="home1">
           <Link to="/" onClick={handleCloseMenu}>
             <FaHome /> Home
           </Link>

@@ -4,53 +4,134 @@ import { useNavigate } from "react-router-dom";
 
 const COURSES = [
   {
-    id: "react-fullstack",
-    title: "Full-Stack Web Development (React + Node)",
-    duration: "24 Weeks",
+    id: "python-stack",
+    title: "Python Stack Development",
+    duration: "Self-paced",
     level: "Beginner → Advanced",
-    rating: 4.9,
-    about: "End-to-end path: HTML/CSS → JavaScript → React → Node/Express → MongoDB → Deployment. 6 real projects, interview kit.",
+    rating: 4.8,
+    about: "Python, Django, HTML/CSS, JavaScript, SQL. Hands-on projects for web apps.",
     docs: [
-      { title: "Syllabus (PDF)", link: "https://example.com/react-syllabus.pdf" },
-      { title: "Project Guide: Job Portal", link: "https://example.com/job-portal-guide.pdf" },
+      { title: "Python Syllabus", link: "https://www.mygreatlearning.com/academy/learn-for-free/courses/python-stack" },
+      { title: "Django Project Guide", link: "https://www.youtube.com/watch?v=F5mRW0jo-U4" },
     ],
     videos: [
-      { title: "React Crash Course", yt: "https://www.youtube.com/watch?v=w7ejDZ8SWv8" },
-      { title: "Node.js Full Course", yt: "https://www.youtube.com/watch?v=Oe421EPjeBE" },
+      { title: "Python Basics", yt: "https://www.youtube.com/watch?v=rfscVS0vtbw" },
+      { title: "Django Crash Course", yt: "https://www.youtube.com/watch?v=F5mRW0jo-U4" },
     ],
   },
   {
-    id: "data-ai",
-    title: "Data Science & AI Practicum",
-    duration: "28 Weeks",
+    id: "java-fullstack",
+    title: "Java Full Stack Developer",
+    duration: "Self-paced",
+    level: "Beginner → Advanced",
+    rating: 4.7,
+    about: "Java, Spring Boot, Hibernate, MySQL, HTML/CSS, JavaScript. Build real projects.",
+    docs: [
+      { title: "Java Full Stack Syllabus", link: "https://www.simplilearn.com/free-full-stack-java-developer-course-skillup" },
+      { title: "Spring Boot Guide", link: "https://www.youtube.com/watch?v=vtPkZShrvXQ" },
+    ],
+    videos: [
+      { title: "Java Full Stack Intro", yt: "https://www.youtube.com/watch?v=2u-2yN5bZ60" },
+    ],
+  },
+  {
+    id: "mern-stack",
+    title: "MERN Stack Fundamentals",
+    duration: "6 hours",
     level: "Beginner → Intermediate",
     rating: 4.8,
-    about: "Python, Pandas, ML, NLP basics, mini capstone projects. Includes Kaggle practice, interview notebooks.",
+    about: "MongoDB, Express.js, React, Node.js. Full-stack JavaScript projects.",
     docs: [
-      { title: "Syllabus (PDF)", link: "https://example.com/data-syllabus.pdf" },
-      { title: "Project: Sales Forecasting", link: "https://example.com/forecast-guide.pdf" },
+      { title: "MERN Syllabus", link: "https://www.mygreatlearning.com/academy/learn-for-free/courses/mern-stack-fundamentals" },
     ],
     videos: [
-      { title: "Python for Data Science", yt: "https://www.youtube.com/watch?v=rfscVS0vtbw" },
-      { title: "Intro to Machine Learning", yt: "https://www.youtube.com/watch?v=Gv9_4yMHFhI" },
+      { title: "MERN Crash Course", yt: "https://www.youtube.com/watch?v=7CqJlxBYj-M" },
     ],
   },
   {
-    id: "cp",
-    title: "Competitive Programming Fast-Track",
-    duration: "12 Weeks",
-    level: "Beginner → Pro",
+    id: "fullstack-js",
+    title: "Full Stack JavaScript Path",
+    duration: "Self-paced",
+    level: "Beginner → Advanced",
     rating: 4.7,
-    about: "Problem patterns, DS & Algorithms, timed mock contests. Weekly practice + editorials.",
+    about: "HTML/CSS, JavaScript, Node.js, Express.js, MongoDB. Projects included.",
     docs: [
-      { title: "Topics & Roadmap", link: "https://example.com/cp-roadmap.pdf" },
-      { title: "Top 100 Problems", link: "https://example.com/top100.pdf" },
+      { title: "Full Stack JS Syllabus", link: "https://www.theodinproject.com/paths/full-stack-javascript" },
     ],
     videos: [
-      { title: "DSA Playlist", yt: "https://www.youtube.com/watch?v=92S4zgXN17o" },
-      { title: "Algorithm Patterns", yt: "https://www.youtube.com/watch?v=8hly31xKli0" },
+      { title: "JS Full Stack", yt: "https://www.youtube.com/watch?v=4m9RsdRO-Vo" },
     ],
   },
+  {
+    id: "django-stack",
+    title: "Full Stack Web Development with Python & Django",
+    duration: "74+ hours",
+    level: "Beginner → Advanced",
+    rating: 4.8,
+    about: "HTML/CSS, JavaScript, Python, Django, SQL. Real-world projects included.",
+    docs: [
+      { title: "Django Syllabus", link: "https://www.springboard.com/resources/learning-paths/web-development-python-django/" },
+    ],
+    videos: [
+      { title: "Django Full Course", yt: "https://www.youtube.com/watch?v=F5mRW0jo-U4" },
+    ],
+  },
+  {
+    id: "ai-ml-python",
+    title: "AI/ML Using Python (IIT Madras)",
+    duration: "36 hours",
+    level: "Beginner → Intermediate",
+    rating: 4.7,
+    about: "Python, Machine Learning, Data Analysis. Hands-on projects for AI models.",
+    docs: [
+      { title: "AI/ML Syllabus", link: "https://swayam.gov.in/nd2_cec20_it_iiitd" },
+    ],
+    videos: [
+      { title: "Intro to AI & ML", yt: "https://www.youtube.com/watch?v=aircAruvnKk" },
+    ],
+  },
+  {
+    id: "ml-crash",
+    title: "Machine Learning Crash Course (Google)",
+    duration: "Self-paced",
+    level: "Beginner → Intermediate",
+    rating: 4.7,
+    about: "TensorFlow, Neural Networks, Supervised Learning. Quick practical course.",
+    docs: [
+      { title: "ML Crash Course Docs", link: "https://developers.google.com/machine-learning/crash-course" },
+    ],
+    videos: [
+      { title: "ML Crash Course", yt: "https://www.youtube.com/watch?v=tPYj3fFJGjk" },
+    ],
+  },
+  {
+    id: "data-science-foundations",
+    title: "Data Science Foundations (IBM SkillsBuild)",
+    duration: "13 hours",
+    level: "Beginner → Intermediate",
+    rating: 4.8,
+    about: "Python, Data Analysis, Data Visualization. Build real datasets projects.",
+    docs: [
+      { title: "Data Science Docs", link: "https://skillsbuild.org/students/course-catalog/data-science" },
+    ],
+    videos: [
+      { title: "Data Science Crash Course", yt: "https://www.youtube.com/watch?v=ua-CiDNNj30" },
+    ],
+  },
+  {
+    id: "ai-educators",
+    title: "AI for Educators (IIT Madras)",
+    duration: "25 hours",
+    level: "Beginner",
+    rating: 4.6,
+    about: "AI Tools for Education, Classroom Applications. Practical examples included.",
+    docs: [
+      { title: "AI for Educators Syllabus", link: "https://swayam.gov.in/nd2_cec20_ed_iiitd" },
+    ],
+    videos: [
+      { title: "AI in Education", yt: "https://www.youtube.com/watch?v=Gv9_4yMHFhI" },
+    ],
+  }
 ];
 
 export default function Courses() {
@@ -174,39 +255,27 @@ export default function Courses() {
               <p className="course-about">{course.about}</p>
 
               <div className="course-resources">
-                <div className="resource-section">
+               
                   <h4 className="resource-title">📚 Documents</h4>
                   <div className="resource-list">
                     {course.docs.map((doc, idx) => (
-                      <a 
-                        key={idx} 
-                        href={doc.link} 
-                        className="resource-link" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                      >
+                      <p key={idx} className="resource-text">
                         {doc.title}
-                      </a>
+                      </p>
                     ))}
                   </div>
-                </div>
 
-                <div className="resource-section">
+              
+
+                
                   <h4 className="resource-title">🎥 Videos</h4>
-                  <div className="resource-list">
                     {course.videos.map((video, idx) => (
-                      <a 
-                        key={idx} 
-                        href={video.yt} 
-                        className="resource-link" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                      >
+                      <p key={idx} className="resource-text">
                         {video.title}
-                      </a>
+                      </p>
                     ))}
-                  </div>
-                </div>
+
+                
               </div>
 
               <button className="enroll-btn" onClick={() => openEnroll(course)}>
