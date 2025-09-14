@@ -8,6 +8,7 @@ function Home() {
   return (
     <div className="home">
       <header className="home-hero">
+        
         <h1>🌏 Welcome to BharathOne </h1>
         <p>
           One platform for Farmers 👨‍🌾, Students 🎓, Patients 🏥, and Citizens 🏛

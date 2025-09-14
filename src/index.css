@@ -110,12 +110,12 @@ body {
 @media (max-width: 768px) {
   .home-cards { 
     grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 
   }
   .home-hero {
      padding: 3rem 2rem;
-     /* background: skyblue; */
+     background: rgb(135, 162, 235);
      /* box-shadow: none; */
      /* color: #fff; */
      border-radius: 0px;
@@ -123,7 +123,14 @@ body {
      border-bottom-right-radius: 20px;
      margin-top: -25px;
      width: 100%;
+     height: 100vh;
 
+  }
+
+  .home-hero h1{
+    font-size: 40px;
+    margin-top: 80px;
+    font-weight: 900;
   }
 
   /* ❌ hide card paragraphs in mobile */
@@ -157,37 +164,35 @@ body {
 
 /* Navbar  */
 
-/* Navbar basic styles */
+/* ===== Desktop navbar (unchanged) ===== */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(90deg, #007bff, #00c897);
-  padding: 2rem 4rem; /* desktop padding increased */
+  padding: 2rem 4rem;
   color: white;
   position: sticky;
   top: 0;
   z-index: 100;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  justify-content: space-around;
   gap: 190px;
 }
-.logo {
+
+.logo-link {
   font-size: 1.8rem;
   font-weight: bold;
   letter-spacing: 1px;
-  cursor: pointer;          /* click icon show avvali */
-  text-decoration: none;    /* Link ayithe underline remove */
-  color: inherit;           /* parent white color inherit */
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
 }
 
-/* Nav links */
 .nav-links {
   display: flex;
   list-style: none;
   gap: 2rem;
   align-items: center;
-  transition: transform 0.3s ease;
 }
 
 .nav-links li a {
@@ -207,47 +212,94 @@ body {
   transform: scale(1.05);
 }
 
-/* Hamburger icon */
-.hamburger {
-  display: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  z-index: 101;
+/* ===== Mobile bottom navbar ===== */
+.bottom-navbar {
+  display: none; /* default hidden for desktop */
 }
 
-/* Mobile responsiveness */
+.bottom-navbar .nav-item {
+  flex: 1;
+  text-align: center;
+  padding: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #555;
+  text-decoration: none;
+  border-radius: 12px;
+  background: #f7f7f7;
+  margin: 0 4px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
 
+.bottom-navbar .nav-item .icon {
+  font-size: 1.5rem;
+  margin-bottom: 2px;
+}
 
-@media (max-width: 768px) {
-  .navbar {
-    padding: 1rem 2rem;
-    gap: 100px;
-  }
+/* Hover effects with colors */
+.bottom-navbar .nav-item:hover {
+  transform: scale(1.1);
+  color: white;
+}
 
-  .nav-links {
+.mobile-home:hover { background: #007bff; }
+.mobile-agri:hover { background: green; }
+.mobile-health:hover { background: red; }
+.mobile-edtech:hover { background: violet; }
+.mobile-gov:hover { background: blue; }
+
+/* Show bottom navbar only on mobile */
+@media(max-width: 768px) {
+  .bottom-navbar {
+    display: flex;
     position: fixed;
-    top: 0;
-    right: -100%; /* hide by default */
-    height: 100vh;
-    width: 60%;
-    background: linear-gradient(90deg, #007bff, #00c897);
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 3rem 2rem;
-    /* gap: 2rem; */
-    transition: right 0.3s ease;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    justify-content: space-around;
+    padding: 0.5rem 0;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.15);
+    z-index: 1000;
+  }
+  .home , .home-hero{
+     background: linear-gradient(90deg, #007bff, #00c897);
+  }
+  .home-cards{
+    position: relative;
+    top: -140px;
+  }
+  /* Home Hero fade-in */
+.home-hero {
+  height: 80vh;
+  margin-top: 50px;
+  box-shadow: none;
+  
+  /* Fade-in effect */
+  opacity: 0;            /* start invisible */
+  transform: translateY(20px); /* slight move from bottom */
+  animation: fadeIn 2s ease forwards; /* duration 1s, easing, keep final state */
+}
+
+/* Keyframes for fade-in */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+  /* Hide desktop navbar links on mobile */
+  .navbar .nav-links {
+    display: none;
   }
 
-  .nav-links.open {
-    right: 0; /* show menu */
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  body.nav-open {
-    overflow: hidden; /* stop body scroll when menu open */
+  .navbar {
+    display: none;
   }
 }
 
@@ -2210,7 +2262,7 @@ body {
   min-height: 100vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   /* background gradient remove chesamu */
-    background: linear-gradient(135deg, #d3dde1 0%, #c5dee5 50%, #cad8e5 100%);
+    /* background: linear-gradient(135deg, #03678f 0%, #091288 50%, #0d6dc7 100%); */
 
   overflow-x: hidden;
   padding: 0.75rem;
@@ -3022,7 +3074,7 @@ body {
   }
 
   .healthcare-main-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .healthcare-stats-bar {
@@ -3102,7 +3154,7 @@ body {
 
 @media (max-width: 640px) {
   .healthcare-main-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .healthcare-main-subtitle {
@@ -3174,7 +3226,7 @@ body {
   }
 
   .healthcare-main-title {
-    font-size: 1.4rem;
+    font-size: 1.9rem;
     margin-top: 30px;
   }
   .healthcare-main-subtitle{
