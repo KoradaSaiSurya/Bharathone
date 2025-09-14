@@ -12,6 +12,7 @@ function Extra() {
     if (user.name && user.email) {
       setStudentData(user);
       // course data ni pass cheyyadam
+      
       navigate("/courseDetails", {
         state: {
           course: {
