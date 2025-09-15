@@ -111,6 +111,7 @@ body {
   .home-cards { 
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 100px;
+    margin-top: -70px;
 
   }
   .home-hero {
@@ -220,12 +221,12 @@ body {
 .bottom-navbar .nav-item {
   flex: 1;
   text-align: center;
-  padding: 0.5rem 0;
+  padding: 0.3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 0.8rem;
-  color: #555;
+  color: #4c4a4a;
   text-decoration: none;
   border-radius: 12px;
   background: #f7f7f7;
@@ -239,17 +240,22 @@ body {
   margin-bottom: 2px;
 }
 
+
 /* Hover effects with colors */
-.bottom-navbar .nav-item:hover {
+.bottom-navbar .nav-item:hover { 
   transform: scale(1.1);
-  color: white;
+  /* color: white; */
+}
+.bottom-navbar{
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
-.mobile-home:hover { background: #007bff; }
-.mobile-agri:hover { background: green; }
-.mobile-health:hover { background: red; }
-.mobile-edtech:hover { background: violet; }
-.mobile-gov:hover { background: blue; }
+.mobile-home:hover { color: #00c897 }
+.mobile-agri:hover { color: green; }
+.mobile-health:hover  { color: #007bff; }
+.mobile-edtech:hover  { color: rgb(255, 85, 0); }
+.mobile-gov:hover { color: rgb(255, 230, 0); }
 
 /* Show bottom navbar only on mobile */
 @media(max-width: 768px) {
@@ -448,6 +454,10 @@ body {
     flex: 1 1 100%;
     max-width: 100%;
   }
+  .hero-right{
+    position: relative;
+    top: -40px;
+  }
   .hero-left h1 {
     font-size: 2rem;
     margin-bottom: 15px;
@@ -474,6 +484,7 @@ body {
     max-width: 300px;
     margin-top: 25px;
   }
+ 
 }
 
 /* Small mobile */
@@ -489,7 +500,7 @@ body {
   .cta {
     width: 80%;
     font-size: 1rem;
-    padding: 12px 0;
+    padding: 15px 0;
   }
   .features div {
     font-size: 0.4rem;
