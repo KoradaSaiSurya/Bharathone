@@ -13,19 +13,19 @@ function Navbar() {
 
         <ul className="nav-links">
           <li className="nav-home">
-            <Link to="/"><FaHome /> Home</Link>
+            <Link to="/" className="nav-home" ><FaHome /> Home</Link>
           </li>
           <li className="nav-agri">
-            <Link to="/agriculture"><FaLeaf /> AgriTech</Link>
+            <Link to="/agriculture" className="nav-agri"><FaLeaf /> AgriTech</Link>
           </li>
           <li className="nav-edu">
-            <Link to="/edtech"><FaBook /> EdTech</Link>
+            <Link to="/edtech" className="nav-edu"><FaBook /> EdTech</Link>
           </li>
           <li className="nav-health">
-            <Link to="/health"><FaHospital /> HealthTech</Link>
+            <Link to="/health" className="nav-health"><FaHospital /> HealthTech</Link>
           </li>
           <li className="nav-gov">
-            <Link to="/mainServices"><FaUniversity /> GovTech</Link>
+            <Link to="/mainServices" className="nav-gov"><FaUniversity /> GovTech</Link>
           </li>
         </ul>
       </nav>

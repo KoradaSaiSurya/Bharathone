@@ -1,5 +1,6 @@
+/* ---------- Base Styles ---------- */
 body {
- margin: 0px;
+  margin: 0;
   font-family: "Poppins", sans-serif;
   background: linear-gradient(135deg, #f0f4ff, #e6f7f1);
   color: #333;
@@ -7,7 +8,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden; /* prevent horizontal scroll */
 }
-
 
 /* ---------- Container ---------- */
 .home {
@@ -24,21 +24,25 @@ body {
   color: #fff;
   border-radius: 20px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-  padding: 3rem 1.5rem;
   margin-bottom: 2.5rem;
   transition: transform 0.3s ease;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .home-hero:hover {
   transform: translateY(-4px);
 }
 
-.home-hero h1 {
+.home-text-header h1 {
   font-size: clamp(1.8rem, 4vw, 3rem);
+  margin-top: 100px;
   margin-bottom: 1rem;
 }
 
-.home-hero p {
+.home-text-header p {
   font-size: clamp(1rem, 2vw, 1.3rem);
   line-height: 1.5;
   max-width: 700px;
@@ -74,8 +78,8 @@ body {
 
 .home-card p {
   font-size: clamp(0.9rem, 2vw, 1rem);
-  margin-bottom: 1rem;
   line-height: 1.4;
+  margin-bottom: 1rem;
 }
 
 .home-card button {
@@ -99,64 +103,220 @@ body {
 .home-card.health { border-top: 6px solid #dc3545; }
 .home-card.edu { border-top: 6px solid #17a2b8; }
 
-/* ---------- Responsive Tweaks ---------- */
-/* Tablets */
-@media (max-width: 1024px) {
-  .home { padding: 1.5rem; }
-  .home-cards { gap: 1.5rem; }
+/* ---------- Hero Image ---------- */
+.hero-image {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
 }
 
-/* Mobiles */
+.hero-image img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  position: relative;
+  top: 20px;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05);
+}
+
+/* ---------- Text + Image Combo ---------- */
+.home-text-img {
+  display: flex;
+}
+
+/* ---------- Icons Section ---------- */
+.home-icons {
+  display: none;
+}
+
+/* ---------- Tablet Tweaks ---------- */
+@media (max-width: 1024px) {
+  .home {
+    padding: 1.5rem;
+  }
+  .home-cards {
+    gap: 1.5rem;
+  }
+}
+
+/* ---------- Mobile Styles ---------- */
 @media (max-width: 768px) {
-  .home-cards { 
+  .home-cards {
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 100px;
     margin-top: -70px;
-
   }
+
+  .home-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    top: -50px;
+    z-index: 10;
+  }
+
+  .home-icons .icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .home-icons .icon-item img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    background: #dcecf1;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .home-icons .icon-item span {
+    font-size: 0.75rem;
+    margin-top: 5px;
+    color: #333;
+  }
+
+  .home-icons .icon-item:hover img {
+    transform: scale(1.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .home-icons .icon-item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+    top: -40px;
+  }
+
+  /* ---------- Mobile Hero ---------- */
   .home-hero {
-     padding: 3rem 2rem;
-     background: rgb(135, 162, 235);
-     /* box-shadow: none; */
-     /* color: #fff; */
-     border-radius: 0px;
-     border-bottom-left-radius: 20px;
-     border-bottom-right-radius: 20px;
-     margin-top: -25px;
-     width: 100%;
-     height: 100vh;
-
+    padding: 3rem 2rem;
+    background: linear-gradient(120deg, #00c897, #00eaff);
+    border-radius: 0;
+    border-bottom-left-radius: 70px;
+    margin-top: -25px;
+    width: 100%;
+    height: 30vh;
+    margin-bottom: 120px;
   }
 
-  .home-hero h1{
-    font-size: 40px;
-    margin-top: 80px;
-    font-weight: 900;
+  .home-text-header {
+    position: relative;
+    left: 40px;
+    top: -70px;
   }
 
-  /* ❌ hide card paragraphs in mobile */
+  .home-text-header h1 {
+    font-size: 23px;
+    margin-top: 150px;
+    text-align: left;
+    width: 150%;
+    font-family: 'Montserrat';
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    right: 50px;
+  }
+
+  .home-text-header p {
+    font-size: 12px;
+    text-align: left;
+    margin-left: 0;
+    position: relative;
+    right: 50px;
+  }
+
+ 
+.hero-image {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;   /* image right side ki */
+  align-items: center;
+  overflow: hidden;             /* 👈 prevents zoom-out / overflow */
+  position: relative;
+  
+}
+
+
+
+.hero-image img {
+  width: 150%;                  /* slightly bigger but safe */
+  max-width: none;
+  height: auto;
+  transform: translateX(50px);  
+  transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+  transform: translateX(25px) scale(1.05);
+}
+
+
+  .home-text-img {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    left: 20px;
+  }
+
   .home-card p {
     font-size: 5px;
   }
-  .home{
+
+  .home {
     justify-content: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background: #0056b3; */
-    margin-top: 0px;
+    background: #edeeef;
+    margin-top: 0;
     margin-bottom: -20px;
-    
   }
 
+  /* ---------- Small Cards for Mobile ---------- */
+  .home-card.agri,
+  .home-card.gov,
+  .home-card.health,
+  .home-card.edu {
+    width: 100px;
+    height: 100px;
+  }
+
+  .home-card.agri { border-top: 6px solid #28a745; }
+  .home-card.gov { border-top: 6px solid #ffc107; }
+  .home-card.health { border-top: 6px solid #dc3545; }
+  .home-card.edu { border-top: 6px solid #17a2b8; }
+
+  .home-card h2 {
+    font-size: 17px;
+    margin-top: 0;
+  }
 }
 
-/* Small Mobiles */
+/* ---------- Small Mobiles ---------- */
 @media (max-width: 480px) {
-  .home-cards { grid-template-columns: 1fr 1fr; }
-  .home-hero { padding: 2.5rem 1.5rem; }
+  .home-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .home-hero {
+    padding: 2.5rem 1.5rem;
+  }
 }
-
 
 /* ___________________________________________________________________________________________ */
 
@@ -225,8 +385,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 0.8rem;
-  color: #4c4a4a;
+  font-size: 0.75rem;
+  color: #393939;
   text-decoration: none;
   border-radius: 12px;
   background: #f7f7f7;
@@ -236,7 +396,7 @@ body {
 }
 
 .bottom-navbar .nav-item .icon {
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin-bottom: 2px;
 }
 
@@ -271,24 +431,9 @@ body {
     box-shadow: 0 -2px 8px rgba(0,0,0,0.15);
     z-index: 1000;
   }
-  .home , .home-hero{
-     background: linear-gradient(90deg, #007bff, #00c897);
-  }
-  .home-cards{
-    position: relative;
-    top: -140px;
-  }
+ 
   /* Home Hero fade-in */
-.home-hero {
-  height: 80vh;
-  margin-top: 50px;
-  box-shadow: none;
-  
-  /* Fade-in effect */
-  opacity: 0;            /* start invisible */
-  transform: translateY(20px); /* slight move from bottom */
-  animation: fadeIn 2s ease forwards; /* duration 1s, easing, keep final state */
-}
+
 
 /* Keyframes for fade-in */
 @keyframes fadeIn {
