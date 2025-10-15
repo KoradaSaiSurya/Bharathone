@@ -147,10 +147,19 @@ body {
 @media (max-width: 768px) {
   .home-cards {
     grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 100px;
-    margin-top: -70px;
+    background: linear-gradient(135deg, #e0ffe0, #ccf5cc); /* light green background */
+    /* margin: 0%; 0% margin */
+    padding: 25px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+       position: relative;
+    top: -40px;
+    border-radius: 0px;
+    /* box-shadow: 0 -2px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
+    box-shadow: 0 1px 5px rgba(0,0,0,0.15);
   }
-
+ 
+ 
   .home-icons {
     display: flex;
     justify-content: center;
@@ -159,7 +168,7 @@ body {
     width: 100%;
     margin: 0 auto;
     position: relative;
-    top: -50px;
+    top: -40px;
     z-index: 10;
   }
 
@@ -169,7 +178,7 @@ body {
     align-items: center;
     text-align: center;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.1s ease;
   }
 
   .home-icons .icon-item img {
@@ -179,8 +188,10 @@ body {
     background: #dcecf1;
     padding: 10px;
     border-radius: 50%;
+
+    border: 2px solid rgb(47, 206, 255);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
   }
 
   .home-icons .icon-item span {
@@ -190,7 +201,7 @@ body {
   }
 
   .home-icons .icon-item:hover img {
-    transform: scale(1.2);
+    transform: scale(2);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   }
 
@@ -213,6 +224,8 @@ body {
     width: 100%;
     height: 30vh;
     margin-bottom: 120px;
+    /* box-shadow: none; */
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1), 0 1px 1px rgba(0,0,0,0.1), 0 4px 4px rgba(0,0,0,0.1);
   }
 
   .home-text-header {
@@ -242,7 +255,7 @@ body {
 
  
 .hero-image {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   display: flex;
   justify-content: flex-end;   /* image right side ki */
   align-items: center;
