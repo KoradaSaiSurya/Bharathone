@@ -11,7 +11,7 @@ body {
 
 /* ---------- Container ---------- */
 .home {
-  max-width: 1400px;
+  max-width: 90%;
   margin: 0 auto;
   padding: 2rem 1rem;
   text-align: center;
@@ -571,7 +571,7 @@ body {
 
 .hero-right .hero-image {
   width: 100%;
-  max-width: 400px;
+  max-width: 600px;
   border-radius: 25px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.4);
   transition: transform 0.5s ease;
@@ -1576,6 +1576,9 @@ body {
     text-align: center;
     padding: 2rem 1rem;
   }
+  .course-resources h4{
+    font-size: 12px;
+  }
 
   .hero-right {
     margin-top: 2rem;
@@ -1584,6 +1587,9 @@ body {
   .hero-visual {
     width: 300px;
     height: 300px;
+  }
+  .course-title{
+    font-size: 1.2rem;
   }
 
   .courses-section {
@@ -1689,7 +1695,7 @@ body {
 
 /* Main Container */
 .course-details {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 20px;
   min-height: 100vh;
@@ -2062,7 +2068,7 @@ body {
 /* ___________________________________________________________________________________________ */
 
 .container1 {
-            max-width: 1400px;
+            max-width: 90%;
             margin: 0 auto;
             padding: 20px;
         }

@@ -1,7 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-export default function Agriculture({ onGo }) {
+const Agriculture = (onGo) => {
   return (
+    <div>
+     
     <section className="hero1">
       <div className="hero-overlay"></div>
       <div className="hero-left">
@@ -19,5 +21,10 @@ export default function Agriculture({ onGo }) {
 
       </div>
     </section>
-  );
+
+    </div>
+  )
 }
+
+export default Agriculture
+
