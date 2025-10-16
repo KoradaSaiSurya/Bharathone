@@ -1,47 +1,3 @@
-// import React from "react";
-// import { useNavigate } from "react-router-dom";
-
-// const sections = [
-//   { title: "Aadhaar Services", link: "/aadhaarServices" },
-//   { title: "PAN Services", link: "/panServices" },
-//   { title: "Voter ID Services", link: "/voterServices" },
-//   { title: "Ration Card Services", link: "/rationServices" },
-//   { title: "Electricity Bill Services", link: "/electricityServices" },
-//   { title: "Certificate Services", link: "/certificateServices" },
-//   { title: "License Services", link: "/licenseServices" },
-//   { title: "Pension Services", link: "/pensionServices" },
-  
-// ];
-
-// function MainServices() {
-//   const navigate = useNavigate();
-
-//   return (
-//     <div className="container">
-//       <h1 className="title">GovTech - Andhra Pradesh Government Services</h1>
-//       <div className="cards-grid">
-//         {sections.map((section, index) => (
-        //   <div
-        //     key={index}
-        //     className="card"
-        //     onClick={() => navigate(section.link)}
-        //   >
-//             <h2>{section.title}</h2>
-//             <button>Open</button>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default MainServices;
-
-
-
-
-
-
 
 import React from "react";
 import { useNavigate } from "react-router-dom";
@@ -149,7 +105,7 @@ export default function GoTech() {
   const navigate = useNavigate(); // ✅ hook for navigation
 
   return (
-    <div className="container">
+    <div className="container1">
       {/* Header */}
       <header className="header">
         <h1 className="title">GovermentTech</h1>
@@ -181,7 +137,7 @@ export default function GoTech() {
             <div className="card-icon">{s.icon}</div>
             <h2 className="card-title">{s.title}</h2>
             <p className="card-description">{s.desc}</p>
-            <ul className="card-features">
+            <ul className="card-feature">
               {s.features.map((f, idx) => (
                 <li key={idx}>{f}</li>
               ))}

@@ -149,10 +149,11 @@ body {
     grid-template-columns: repeat(2, 1fr);
     background: linear-gradient(135deg, #e0ffe0, #ccf5cc); /* light green background */
     /* margin: 0%; 0% margin */
-    padding: 25px;
+    padding: 34px;
     padding-top: 50px;
     padding-bottom: 50px;
-       position: relative;
+    position: relative;
+    margin: 0%;
     top: -40px;
     border-radius: 0px;
     /* box-shadow: 0 -2px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
@@ -201,7 +202,7 @@ body {
   }
 
   .home-icons .icon-item:hover img {
-    transform: scale(2);
+    transform: scale(1.02);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   }
 
@@ -271,11 +272,11 @@ body {
   max-width: none;
   height: auto;
   transform: translateX(50px);  
-  transition: transform 0.3s ease;
+  /* transition: transform 0.3s ease; */
 }
 
 .hero-image img:hover {
-  transform: translateX(25px) scale(1.05);
+  /* transform: translateX(25px) scale(1.05); */
 }
 
 
@@ -837,6 +838,13 @@ body {
   }
   .capture-right {
     padding: 20px;
+    border-radius: 0%;
+    margin-top: 0%;
+
+
+  }
+  .capture{
+    padding-bottom: 100px;
   }
   
 
@@ -1018,6 +1026,10 @@ body {
             .result {
                 padding: 20px;
                 margin: 10px;
+                margin-bottom: 50px;
+            }
+             .result h2{
+              font-size: 10px;
             }
 
             h2 {
@@ -1048,7 +1060,10 @@ body {
         @media (max-width: 480px) {
             .result {
                 padding: 15px;
+                margin-bottom: 500px;
+
             }
+           
 
             h2 {
                 font-size: 1.8rem;
@@ -1060,6 +1075,7 @@ body {
 
             .card1 h3 {
                 font-size: 1.1rem;
+                
             }
 
             .card1 p, .card li {
@@ -1572,6 +1588,8 @@ body {
 
   .courses-section {
     padding: 3rem 1rem;
+    
+    margin-bottom: 50px;
   }
 
   .course-grid {
@@ -1976,6 +1994,7 @@ body {
   /* Reduce paddings & font sizes */
   .course-details {
     padding: 15px;
+    margin-bottom: 60px
   }
 
   .details-top h2 {
@@ -2042,13 +2061,7 @@ body {
 
 /* ___________________________________________________________________________________________ */
 
-
-
-
-
-
-
-.container {
+.container1 {
             max-width: 1400px;
             margin: 0 auto;
             padding: 20px;
@@ -2178,20 +2191,21 @@ body {
             font-size: 0.95rem;
         }
 
-        .card-features {
+        .card-feature {
             list-style: none;
             margin-bottom: 25px;
         }
 
-        .card-features li {
+        .card-feature li {
             padding: 8px 0;
             color: #555;
             position: relative;
             padding-left: 25px;
             font-size: 0.9rem;
+            text-align: left;
         }
 
-        .card-features li::before {
+        .card-feature li::before {
             content: '✓';
             position: absolute;
             left: 0;
@@ -2227,9 +2241,19 @@ body {
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .container {
-                padding: 15px;
+            .container1 {
+                padding: 0px;
+                margin-bottom: 100px;
             }
+            .header{
+                /* padding: 10px; */
+                border-radius: 0%;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                
+              
+            }
+            
 
             .title {
                 font-size: 2.5rem;
@@ -2245,24 +2269,49 @@ body {
             }
 
             .stat-number {
-                font-size: 2rem;
+                font-size: 1.6rem;
             }
 
             .cards-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 1fr;
                 gap: 20px;
+                padding: 10px;
+            }
+            .card-feature{
+              text-align: left;
+              padding: 0px;
+            }
+            .card-feature li{
+              /* display: none; */
+              font-size: 9px;
+              
+            }
+            .card-button{
+              font-size: 0.6rem;
+              padding: 7% 8%;
+            }
+            .card-feature li::before{
+              
+            position: absolute;
+            left: 7px;
+            top: 5px;
+            font-size: 0.7rem;
             }
 
             .card {
                 padding: 25px;
+                
             }
 
             .card-icon {
-                font-size: 2.5rem;
+                font-size: 1.5rem;
+            }
+            .card-description{
+              font-size: 0.6rem;
             }
 
             .card-title {
-                font-size: 1.3rem;
+                font-size: 0.8rem;
             }
         }
 
@@ -2398,14 +2447,28 @@ body {
 /* Responsive */
 @media (max-width: 768px) {
   .title2 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
+    margin-top: 10px;
   }
   .subtitle2 {
-    font-size: 0.9rem;
+    font-size: 0.6rem;
   }
   .card2 {
-    padding: 25px 15px;
+    padding: 20px 10px;
+    border: 2px solid #187e015b;
   }
+  .cards-grid2{
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+
+  }
+  .cards-grid2 h2{
+    font-size: 0.8rem;
+  }
+  .icon2{
+    font-size: 1.5rem;
+  }
+
 }
 
         
@@ -3270,6 +3333,7 @@ body {
 @media (min-width: 768px) {
   .healthcare-main-container {
     padding: 1.5rem;
+    /* margin-bottom: 150px; */
   }
 
   .healthcare-main-title {
@@ -3296,6 +3360,10 @@ body {
   .clinic-patient-meta {
     gap: 1.5rem;
   }
+  .clinic-patient-card{
+    margin-bottom: 500px;
+  }
+  
 }
 
 @media (min-width: 1024px) {
@@ -3324,6 +3392,9 @@ body {
 @media (max-width: 640px) {
   .healthcare-main-title {
     font-size: 2.5rem;
+  }
+  .clinic-patient-card{
+    margin-bottom: 500px;
   }
 
   .healthcare-main-subtitle {
@@ -3392,8 +3463,11 @@ body {
 @media (max-width: 480px) {
   .healthcare-main-container {
     padding: 0.5rem;
+    padding-bottom: 70px;
   }
-
+.clinic-patient-card{
+    margin-bottom: 500px;
+  }
   .healthcare-main-title {
     font-size: 1.9rem;
     margin-top: 30px;
