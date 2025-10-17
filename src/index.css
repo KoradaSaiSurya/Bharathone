@@ -30,7 +30,7 @@ body {
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin-top: -1.3rem;
+  margin-top: -1rem;
 }
 
 .home-hero:hover {
@@ -161,6 +161,9 @@ body {
     box-shadow: 0 1px 5px rgba(0,0,0,0.15);
   }
  
+  .home-card{
+     padding: 2rem 1.5rem;
+  }
  
   .home-icons {
     display: flex;
@@ -253,6 +256,7 @@ body {
     margin-left: 0;
     position: relative;
     right: 50px;
+     z-index: 2;
   }
 
  
@@ -264,6 +268,7 @@ body {
   /* overflow: hidden;  */
   position: relative;
   width: 100%;
+  z-index: 0;
 }
 
 .hero-image img {
@@ -273,7 +278,7 @@ body {
   object-fit: contain;
   position: relative;
   right: 0;
-  top: 40px;
+  top: 25px;
   transform: none;
 }
 

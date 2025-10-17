@@ -16,7 +16,7 @@ function Home() {
           </div>
 
           <div className="hero-image">
-            <img src="/images/multi-3d.png" alt="BharathOne hero" />
+            <img src="/images/multi-3d2.png" alt="BharathOne hero" />
           </div>
         </div>
       </header>
